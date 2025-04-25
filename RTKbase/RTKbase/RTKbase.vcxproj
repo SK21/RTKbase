@@ -74,13 +74,47 @@
     <ProjectCapability Include="VisualMicroLinux" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="FlashTxx.c">
+      <DeploymentContent>true</DeploymentContent>
+    </ClCompile>
+    <ClCompile Include="FXUtil.cpp">
+      <DeploymentContent>true</DeploymentContent>
+    </ClCompile>
     <ClCompile Include="RTKbase.ino">
       <FileType>CppCode</FileType>
       <DeploymentContent>true</DeploymentContent>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="arduino_secrets - Template.h">
+      <FileType>CppCode</FileType>
+      <DeploymentContent>true</DeploymentContent>
+    </ClCompile>
+    <ClCompile Include="arduino_secrets.h">
+      <FileType>CppCode</FileType>
+      <DeploymentContent>true</DeploymentContent>
+    </ClCompile>
+    <ClCompile Include="FlashTxx.h">
+      <FileType>CppCode</FileType>
+      <DeploymentContent>true</DeploymentContent>
+    </ClCompile>
+    <ClCompile Include="FXUtil.h">
+      <FileType>CppCode</FileType>
+      <DeploymentContent>true</DeploymentContent>
+    </ClCompile>
     <ClInclude Include="__vm\.RTKbase.vsarduino.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="EthernetUpdate.ino">
+      <FileType>CppCode</FileType>
+      <DeploymentContent>true</DeploymentContent>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Send.ino">
+      <FileType>CppCode</FileType>
+      <DeploymentContent>true</DeploymentContent>
+    </ClCompile>
   </ItemGroup>
   <PropertyGroup>
     <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>
@@ -93,13 +127,18 @@
       <CLanguageStandard>gnu11</CLanguageStandard>
       <CAdditionalWarning />
       <CppAdditionalWarning />
-      <ForcedIncludeFiles>c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\wev10ohk.412\Micro Platforms\default\vm-intelli-pre.h;C:\Users\CoxDa\AppData\Local\Temp\VMBuilds\RTKbase\teensy41\Release\.vmintelli\de1b558da74872cbc846942edf56a63c\vm-intelli-gcc-defines.h;c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\wev10ohk.412\Micro Platforms\default\vm-intelli-post.h;$(ProjectDir)__vm\.RTKbase.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles>c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\wev10ohk.412\Micro Platforms\default\vm-intelli-pre.h;C:\Users\CoxDa\AppData\Local\Temp\VMBuilds\RTKbase\teensy41\Release\.vmintelli\ad663208f40e3f0799d8e53faad9fa5b\vm-intelli-gcc-defines.h;c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\wev10ohk.412\Micro Platforms\default\vm-intelli-post.h;$(ProjectDir)__vm\.RTKbase.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <UndefineAllPreprocessorDefinitions>true</UndefineAllPreprocessorDefinitions>
       <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
-      <PreprocessorDefinitions>_VMICRO_INTELLISENSE;__HARDWARE_imxrt1062__;__HARDWARE_IMXRT1062__;__IMXRT1062__;TEENSYDUINO=157;ARDUINO=108019;ARDUINO_TEENSY41;F_CPU=600000000;USB_SERIAL;LAYOUT_US_ENGLISH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_VMICRO_INTELLISENSE;__HARDWARE_imxrt1062__;__HARDWARE_IMXRT1062__;__IMXRT1062__;TEENSYDUINO=157;ARDUINO=108019;ARDUINO_TEENSY41;F_CPU=450000000;USB_SERIAL;LAYOUT_US_ENGLISH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties arduino.upload.port="COM5" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

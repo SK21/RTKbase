@@ -17,5 +17,7 @@
 // User Defined Errors to Ignore below... [vm.intellisense.ignore-error-codes]
 #include <arduino.h>
 #include "..\RTKbase.ino"
+#include "..\EthernetUpdate.ino"
+#include "..\Send.ino"
 #endif
 #endif

@@ -16,6 +16,26 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RTKbase.ino" />
+    <ClCompile Include="arduino_secrets - Template.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="arduino_secrets.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EthernetUpdate.ino" />
+    <ClCompile Include="FlashTxx.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlashTxx.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FXUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FXUtil.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Send.ino" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="__vm\.RTKbase.vsarduino.h">
