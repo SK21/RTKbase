@@ -86,14 +86,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="arduino_secrets - Template.h">
-      <FileType>CppCode</FileType>
-      <DeploymentContent>true</DeploymentContent>
-    </ClCompile>
-    <ClCompile Include="arduino_secrets.h">
-      <FileType>CppCode</FileType>
-      <DeploymentContent>true</DeploymentContent>
-    </ClCompile>
     <ClCompile Include="FlashTxx.h">
       <FileType>CppCode</FileType>
       <DeploymentContent>true</DeploymentContent>
@@ -136,9 +128,4 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
-  <ProjectExtensions>
-    <VisualStudio>
-      <UserProperties arduino.upload.port="COM5" />
-    </VisualStudio>
-  </ProjectExtensions>
 </Project>

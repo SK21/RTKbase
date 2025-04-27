@@ -13,13 +13,18 @@ void SendComm()
         //5     sent 3
         //6     Status
         //      bit 0 - connected
-        //7     hangup count lo
-        //8     hangup count hi
+        //      bit 1 - RTCM message found
+        //7     hangup count 
+        //8     bad packet
         //9     InoID lo
         //10    InoID hi
-        //11    CRC
+        //11    IP0
+        //12    IP1
+        //13    IP2
+        //14    IP3
+        //15    CRC
 
-        const uint16_t PGNlength = 12;
+        const uint16_t PGNlength = 16;
         byte data[PGNlength];
 
         data[0] = 136;
@@ -31,14 +36,20 @@ void SendComm()
 
         data[6] = 0;
         if (ntripClient.connected()) data[6] |= 0b00000001;
+        if (inRtcmMessage) data[6] |= 0b00000010;
 
         data[7] = HangUpCount;
-        data[8] = HangUpCount >> 8;
+        data[8] = BadPacket;
 
         data[9] = (byte)InoID;
         data[10] = InoID >> 8;
 
-        data[11] = CRC(data, PGNlength - 1, 0);
+        data[11] = Ethernet.localIP()[0];
+        data[12] = Ethernet.localIP()[1];
+        data[13] = Ethernet.localIP()[2];
+        data[14] = Ethernet.localIP()[3];
+
+        data[15] = CRC(data, PGNlength - 1, 0);
 
         if (Ethernet.linkStatus() == LinkON)
         {
